@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
   
   useEffect(() =>
   {        
-      document?.body?.classList?.add(cn("min-h-screen"), cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable), "dark");
+      document?.body?.classList?.add(cn("min-h-screen"), cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable));
   }, []);
 
   return (

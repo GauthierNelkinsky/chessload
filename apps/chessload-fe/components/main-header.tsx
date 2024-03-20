@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+import ThemeToogle from "./layout/theme-toggle";
 import { Moon , DoorOpen, User} from "lucide-react"
 
 interface IProps {
@@ -29,7 +30,7 @@ const MainHeader: FC<IProps> = ({}) => {
               className="flex items-center space-x-4 lg:space-x-6"
             >
               <Link
-                href="/"
+                href="/openings"
                 className=""
               >
                 Openings
@@ -47,7 +48,7 @@ const MainHeader: FC<IProps> = ({}) => {
                 <DropdownMenuContent>
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem className="flex gap-1"><Moon size={16}/>Dark theme</DropdownMenuItem>
+                  <DropdownMenuItem><ThemeToogle /></DropdownMenuItem>
                   <DropdownMenuItem className="flex gap-1"><User size={16} />Profile</DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem className="flex gap-1"><DoorOpen size={16}/>Sign out</DropdownMenuItem>
