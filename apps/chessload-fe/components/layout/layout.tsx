@@ -2,6 +2,8 @@ import React from "react";
 import { Inter as FontSans } from "next/font/google"
 import Head from "next/head";
 import { useEffect } from 'react';
+import { ThemeProvider } from "../../app/context/theme-provider"
+import Header  from "./header";
 
 import { cn } from "../../lib/utils";
 
@@ -17,8 +19,8 @@ const Layout = ({ children }: LayoutProps) => {
   
   useEffect(() =>
   {        
-      document.body.classList.add(cn("min-h-screen"), cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable), "dark");
-  });
+      document?.body?.classList?.add(cn("min-h-screen"), cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable), "dark");
+  }, []);
 
   return (
     <>
@@ -28,11 +30,19 @@ const Layout = ({ children }: LayoutProps) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
-          content="I’m Théo Nothias, a Graphic Designer & Art Director, based in France, my work is all about bringing ideas to life through killer visuals, into the world of color, typography, and composition to create designs that not  only look good but also grant you the perfect satisfaction."
+          content="Chessload is a web application that allows you to play chess online with your friends."
         />
-        <title>Théo Nothias — Graphic Designer & Art Director</title>
+        <title>Chessload</title>
       </Head>
-      {children}
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+        <Header />
+        {children}
+      </ThemeProvider>
     </>
   );
 };
