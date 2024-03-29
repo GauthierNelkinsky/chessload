@@ -22,10 +22,10 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface IProps {
-
+    className?: string;
 }
 
-const AnalysePanel: FC<IProps> = ({}) => {
+const Analyse: FC<IProps> = ({className}) => {
 
     const [annotationColor, setAnnotationColor] = useState<string>("hidden")
 
@@ -52,10 +52,10 @@ const AnalysePanel: FC<IProps> = ({}) => {
     }
   
   return (
-        <Card>
+        <Card className={cn("h-full", className)}>
             <CardHeader>
                 <CardTitle>
-                    <div className="flex items-center justify-between w-[500px]">
+                    <div className="flex items-center justify-between">
                         Analyse
                         <div className="flex items-center gap-4">
                             <Select>
@@ -93,4 +93,4 @@ const AnalysePanel: FC<IProps> = ({}) => {
     );
 };
 
-export default AnalysePanel;
+export default Analyse;

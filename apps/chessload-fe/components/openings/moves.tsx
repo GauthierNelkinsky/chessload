@@ -7,38 +7,38 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-
-import MoveLine from "@/components/move-line";
+import { cn } from "@/lib/utils";
+import Move from "@/components/openings/move";
 import {ScrollArea} from "@/components/ui/scroll-area";
 
 
 interface IProps {
-
+    className?: string;
 }
 
-const MovesPanel: FC<IProps> = ({}) => {
+const Moves: FC<IProps> = ({className}) => {
   
   return (
-        <Card>
+        <Card className={cn("h-full", className)}>
             <CardHeader>
                 <CardTitle>
-                    <div className="flex items-center justify-between w-[500px]">
+                    <div className="flex items-center justify-between ">
                         Recommanded moves
                     </div>
                 </CardTitle>
             </CardHeader>
             <CardContent>
                 <ScrollArea className="h-32">
-                    <MoveLine />
-                    <MoveLine />
-                    <MoveLine />
-                    <MoveLine />
-                    <MoveLine />
-                    <MoveLine />
+                    <Move />
+                    <Move />
+                    <Move />
+                    <Move />
+                    <Move />
+                    <Move />
                 </ScrollArea>
             </CardContent>
         </Card>
     );
 };
 
-export default MovesPanel;
+export default Moves;

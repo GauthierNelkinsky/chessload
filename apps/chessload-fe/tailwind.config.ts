@@ -22,6 +22,10 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      gridTemplateColumns: {
+        // 1st column is 300px, 3rd columns is 1fr, 2nd column is a square + Min 350px
+        "openings": "300px minmax(350px, min(calc(100vh - 350px), 100%)) 1fr",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

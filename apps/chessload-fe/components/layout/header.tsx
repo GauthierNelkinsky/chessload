@@ -1,4 +1,4 @@
-import MobileNav from "../mobile-nav";
+import MobileNav from "../mobile-header";
 import { Separator } from "../ui/separator";
 import MainHeader from "../main-header";
 interface IProps {
@@ -11,7 +11,7 @@ const Header = ({}:IProps) => {
         <div className="border-b">
           <div className="flex h-16 items-center px-4">
             <MainHeader />
-            {/* <MobileNav /> */}
+            <MobileNav />
         </div>
       </div>
     </section>  

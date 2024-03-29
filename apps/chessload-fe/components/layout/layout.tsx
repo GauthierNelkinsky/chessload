@@ -18,8 +18,8 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   
   useEffect(() =>
-  {        
-      document?.body?.classList?.add(cn("min-h-screen"), cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable));
+  {   
+      document?.body?.classList?.add(cn("bg-background"), cn("font-sans"), cn("antialiased"), cn(fontSans.variable));
   }, []);
 
   return (
