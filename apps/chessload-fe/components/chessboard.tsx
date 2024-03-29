@@ -4,10 +4,9 @@ import { cn } from "@/lib/utils";
 
 interface IProps {
     className?: string;
-    width?: undefined | number;
 }
 
-const Move: FC<IProps> = ({className, width}) => {
+const Move: FC<IProps> = ({className}) => {
   
   return (
         <div className={cn("", className)}>

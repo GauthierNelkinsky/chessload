@@ -22,7 +22,7 @@ const Moves: FC<IProps> = ({className}) => {
         <Card className={cn("h-full", className)}>
             <CardHeader>
                 <CardTitle>
-                    <div className="flex items-center justify-between ">
+                    <div className="flex items-center justify-between">
                         Recommanded moves
                     </div>
                 </CardTitle>
