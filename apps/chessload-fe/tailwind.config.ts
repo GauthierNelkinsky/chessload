@@ -26,6 +26,9 @@ const config = {
         // 1st column is 300px, 3rd columns is 1fr, 2nd column is a square + Min 350px
         "openings": "300px minmax(350px, min(calc(100vh - 360px), 100%, 650px)) 1fr",
       },
+      gridTemplateRows : {
+        "openings": "repeat(1, calc(100vh - 97px))"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
