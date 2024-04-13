@@ -28,23 +28,23 @@ const Moves: FC<IProps> = ({className}) => {
                 </CardTitle>
             </CardHeader>
             <CardContent className="grow relative m-4 h-[100px]">
-                <div className="absolute top-0 bottom-0 left-0 right-0 overflow-scroll pb-[35px] gap-1 flex flex-col">
-                        <Move type="selected"/>
-                        <Move type="selected"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="recommended"/>
-                        <Move type="unrecommended"/>
-                        <Move type="unrecommended"/>
-                        <Move type="unrecommended"/>
-                        <Move type="unrecommended"/>
-                        <Move type="unrecommended"/>
+                <div className="absolute top-0 bottom-0 left-0 right-0 overflow-scroll gap-1 flex flex-col">
+                        <Move type="selected" name="Qe3 - Benko Gambit"/>
+                        <Move type="selected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-[35px] bg-gradient-to-b from-transparent to-card pointer-events-none"></div>
+                {/* <div className="absolute bottom-0 left-0 right-0 h-[35px] bg-gradient-to-b from-transparent to-card pointer-events-none"></div> */}
             </CardContent>
         </Card>
     );

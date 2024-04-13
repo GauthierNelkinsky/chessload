@@ -32,7 +32,7 @@ export default function Openings() {
                 <Moves className="" />
               </div>
               <div className="grow flex flex-col grow min-w-[350px] gap-6">
-                <Moves />
+                <Analyse />
                 <Analyse />
               </div>
             </>
