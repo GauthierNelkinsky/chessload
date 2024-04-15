@@ -27,24 +27,25 @@ const Moves: FC<IProps> = ({className}) => {
                     </div>
                 </CardTitle>
             </CardHeader>
-            <CardContent className="grow relative m-4 h-[100px]">
-                <div className="absolute top-0 bottom-0 left-0 right-0 overflow-scroll gap-1 flex flex-col">
-                        <Move type="selected" name="Qe3 - Benko Gambit"/>
-                        <Move type="selected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                        <Move type="unselected" name="Kh2 - French Defense Advance bla bla"/>
-                </div>
-                {/* <div className="absolute bottom-0 left-0 right-0 h-[35px] bg-gradient-to-b from-transparent to-card pointer-events-none"></div> */}
+            <CardContent className="relative grow h-[100px]">
+                <ScrollArea className="absolute bottom-0 top-0 left-0 right-0 h-full" asTable={false}>
+                    <div className="gap-1 flex flex-col h-full">
+                        <Move variant="selected" name="Qe3 - Benko Gambit"/>
+                        <Move variant="selected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                        <Move variant="unselected" name="Kh2 - French Defense Advance bla bla"/>
+                    </div>
+                </ScrollArea>
             </CardContent>
         </Card>
     );

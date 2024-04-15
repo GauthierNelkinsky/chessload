@@ -51,7 +51,7 @@ const MainHeader: FC<IProps> = ({}) => {
                   <DropdownMenuItem><ThemeToogle /></DropdownMenuItem>
                   <DropdownMenuItem className="flex gap-1"><User size={16} />Profile</DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem className="flex gap-1"><DoorOpen size={16}/>Sign out</DropdownMenuItem>
+                  <DropdownMenuItem className="flex gap-1 text-destructive"><DoorOpen size={16}/>Sign out</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

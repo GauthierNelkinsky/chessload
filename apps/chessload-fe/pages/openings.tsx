@@ -22,16 +22,16 @@ export default function Openings() {
   }, []);
   
   return (
-    <main className="p-6 h-full">
-        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-openings gap-6 h-full">
+    <main className="h-full">
+        <div className="flex flex-col md:grid md:grid-cols-2 p-6 lg:p-0 lg:grid-cols-openings gap-6 h-full">
           {isDesktop && (
             <>
               <Sidebar className="w-[300px]" />
-              <div className="min-w-[350px] max-w-[1000px] grow flex flex-col gap-6">
+              <div className="min-w-[350px] max-w-[1000px] grow flex flex-col gap-6 py-6">
                 <Chessboard className="" />
                 <Moves className="" />
               </div>
-              <div className="grow flex flex-col grow min-w-[350px] gap-6">
+              <div className="grow flex flex-col grow min-w-[350px] gap-6 py-6 pr-6">
                 <Analyse />
                 <Analyse />
               </div>
