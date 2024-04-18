@@ -10,7 +10,8 @@ const Move: FC<IProps> = ({className}) => {
   
   return (
         <div className={cn("", className)}>
-            <CB />
+            <CB 
+            />
         </div>
     );
 };

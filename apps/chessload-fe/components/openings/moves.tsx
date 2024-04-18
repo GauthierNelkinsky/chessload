@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { cn } from "@/lib/utils";
 import Move from "@/components/openings/move";
-import {ScrollArea} from "@/components/ui/scroll-area";
+import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area";
 
 
 interface IProps {

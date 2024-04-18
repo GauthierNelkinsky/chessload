@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
