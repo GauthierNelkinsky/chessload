@@ -10,17 +10,18 @@ interface IProps {
 }
 
 const MovesBreadcrumbs: FC<IProps> = ({className}) => {
-  const [name , setName] = useState("French Defense: Tarrash Variation");
+  const [name , setName] = useState("French Defense: Tarrash");
 
   return (
         <div className={cn("py-6",className)}>
             <div className="pb-6">
                 <Textarea 
-                className="font-semibold leading-none tracking-tight text-md" 
+                className="font-semibold leading-none tracking-tight text-md h-6" 
                 variant="ghost" 
                 maxLength={60}  
                 onChange={(e) => setName(e.target.value)} 
-                value={name} 
+                value={name}
+                spellCheck={false}
                 placeholder="Name of the line" 
                 onKeyDown={(e) => {
                         if(e.key === "Enter") {

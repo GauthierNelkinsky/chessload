@@ -11,7 +11,7 @@ interface IProps {
 const Sidebar: FC<IProps> = ({className}) => {
   
   return (
-    <div className={cn("border-r space-y-1.5 p-6", className)}>
+    <div className={cn("lg:border-r space-y-1.5 p-6", className)}>
         <RepertoireSelector />
         <Separator />
         <MovesBreadcrumbs name="French Defense: Tarrash Variation" />

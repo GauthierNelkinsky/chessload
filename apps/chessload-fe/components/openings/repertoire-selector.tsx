@@ -16,6 +16,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import NewRepertoireDialog from "./newRepertoireDialog";
+import EditRepertoireDialog from "./editRepertoireDialog";
+
+
  
 const frameworks = [
   {
@@ -37,35 +41,7 @@ const frameworks = [
   {
     value: "astro",
     label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
+  }
 ]
 
 interface IProps {
@@ -104,10 +80,14 @@ const RepertoireSelector: FC<IProps> = ({className, name}) => {
                                 <CommandList>
                                     <CommandEmpty>No repertoire found.</CommandEmpty>
                                     <CommandGroup>
-                                        <CommandItem value="create" onSelect={() => setOpen(false)}>
-                                            <CirclePlus className="mr-2 h-4 w-4" />
-                                            Create new repertoire
-                                        </CommandItem>
+                                        <NewRepertoireDialog >
+                                            <CommandItem value="create">
+                                                <div className="flex items-center gap-2">
+                                                    <CirclePlus className="h-4 w-4" />
+                                                    Create new repertoire
+                                                </div>
+                                            </CommandItem>
+                                        </NewRepertoireDialog>
                                     </CommandGroup>
                                     <CommandSeparator />
                                     <CommandGroup heading="White">
@@ -128,7 +108,6 @@ const RepertoireSelector: FC<IProps> = ({className, name}) => {
                                                 )}
                                                 />
                                                 {framework.label}
-                                                <Pencil className="ml-auto h-4 w-4 invisible group-hover:visible" />
                                             </CommandItem>
                                         ))}
                                     </CommandGroup>
@@ -136,9 +115,13 @@ const RepertoireSelector: FC<IProps> = ({className, name}) => {
                             </Command>
                         </PopoverContent>
                     </Popover>
-                    <Button variant="ghost" className="p-2"><Pencil className="ml-auto h-4 w-4" /></Button>
+                        <EditRepertoireDialog>
+                            <Button variant="ghost" className="p-2">
+                                <Pencil className="ml-auto h-4 w-4" />
+                            </Button>
+                        </EditRepertoireDialog>
                 </div>
-                <p className="pt-2 text-sm text-justify">
+                <p className="pt-2 text-sm text-justify text-muted-foreground">
                     Sed in risus turpis. Curabitur tincidunt magna nec felis lacinia semper. Aenean varius, ipsum nec volutpat venenatis, metus felis commodo sem, id sollicitudin eros turpis vitae purus. In tincidunt tincidunt lacinia.
                 </p>
                 
