@@ -6,6 +6,7 @@ import useWindowSize from "@/app/hooks/useWindowSize";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import { useEffect, useState, useRef } from 'react';
 import { cn } from "@/lib/utils";
+import NavigatorCard from "@/components/openings/navigatorCard";
 
 
 export default function Openings() {
@@ -33,7 +34,7 @@ export default function Openings() {
               </div>
               <div className="grow flex flex-col grow min-w-[350px] gap-6 py-6 pr-6">
                 <Analyse />
-                <Analyse />
+                <NavigatorCard />
               </div>
             </>
           )}
